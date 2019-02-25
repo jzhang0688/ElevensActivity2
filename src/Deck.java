@@ -1,6 +1,3 @@
-/**
- * Created by Teacher on 1/7/2019.
- */
 import java.util.List;
 import java.util.ArrayList;
 
@@ -24,6 +21,7 @@ public class Deck {
     private int size;
 
 
+
     /**
      * Creates a new <code>Deck</code> instance.<BR>
      * It pairs each element of ranks with each element of suits,
@@ -33,7 +31,12 @@ public class Deck {
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        for(int i; i < ranks.length; i++)
+        {
+            for(int o; o < suits.length; o++) {
+                cards.add(new Card(ranks[i], suits[o], values[i]));
+            }
+        }
     }
 
 
@@ -42,7 +45,14 @@ public class Deck {
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if (cards.size() == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -50,7 +60,7 @@ public class Deck {
      * @return the number of undealt cards in this deck.
      */
     public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.size();
     }
 
     /**
@@ -67,7 +77,15 @@ public class Deck {
      *         previously dealt.
      */
     public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        if (cards.isEmpty())
+        {
+            return null;
+        }
+        else
+        {
+            return
+        }
+
     }
 
     /**
@@ -105,3 +123,4 @@ public class Deck {
         return rtn;
     }
 }
+
